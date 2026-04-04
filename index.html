@@ -86,6 +86,37 @@
         .formula-box .small { font-size: 1rem; font-weight: normal; margin-top: 10px; }
         .highlight { color: #00f3ff; }
         
+        /* Calculator */
+        .calculator {
+            background: rgba(0,243,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #00f3ff;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid #00f3ff;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        .calculator button {
+            background: #00f3ff;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .calculator button:hover { background: #0066cc; color: #fff; }
+        .result { margin-top: 15px; font-size: 1.2rem; text-align: center; }
+        
         /* Partners */
         .partners { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin: 40px 0; }
         .partner { background: rgba(255,255,255,0.05); padding: 15px 25px; border-radius: 40px; font-weight: bold; }
@@ -157,6 +188,14 @@
         <div class="small" id="formulaDesc">(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)</div>
     </div>
 
+    <!-- Calculator -->
+    <div class="calculator">
+        <h3 style="text-align:center; color:#00f3ff;" id="calcTitle">📊 Calculate Your Growth</h3>
+        <input type="number" id="percentInput" placeholder="Enter % of ZBANK supply you buy (e.g., 0.5, 1, 2)" step="any">
+        <button onclick="calculateGrowth()" id="calcBtn">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+
     <div class="section">
         <div class="section-title" id="title1">⚡ How It Works</div>
         <div class="cards">
@@ -223,6 +262,20 @@
         </div>
     </div>
 
+    <!-- Risks Section -->
+    <div class="section">
+        <div class="section-title" id="title8">⚠️ Risks & Disclaimers</div>
+        <div class="card">
+            <ul id="risksList">
+                <li><strong>Market volatility</strong> — Crypto markets are highly volatile.</li>
+                <li><strong>Regulatory risks</strong> — Changes in UAE/EU/USA regulations may affect operations.</li>
+                <li><strong>Liquidity risks</strong> — Illiquid assets may take time to monetize.</li>
+                <li><strong>Smart contract risks</strong> — Audited but no system is 100% secure.</li>
+                <li><strong>Investment & Utility</strong> — ZBANK is designed for long-term value appreciation through real-world asset backing. While it can be held as an investment, it also provides utility within the ecosystem — governance, staking, and access to illiquid asset pools. Not registered as a security.</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="footer">
         <p>© 2026 ZBANK — Bridging illiquid assets into DeFi</p>
         <p><a href="https://t.me/BOYMAT_token_BYT" target="_blank">Telegram</a> | <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">Tonviewer</a> | <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">STON.fi</a></p>
@@ -231,6 +284,13 @@
 </div>
 
 <script>
+    function calculateGrowth() {
+        let percent = parseFloat(document.getElementById('percentInput').value);
+        if (isNaN(percent)) percent = 0;
+        let assets = percent * 9;
+        document.getElementById('result').innerHTML = `<span class="highlight">${percent}% of ZBANK supply</span> → <span class="highlight">+${assets}% in illiquid assets</span>`;
+    }
+
     const translations = {
         en: {
             tagline: "Bridging Illiquid Legacy Assets into DeFi",
@@ -240,6 +300,8 @@
             formula1: "📈 Buy +1% of ZBANK supply",
             formula2: "💎 Get +9% in illiquid assets added to your liquidity",
             formulaDesc: "(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)",
+            calcTitle: "📊 Calculate Your Growth",
+            calcBtn: "Calculate",
             title1: "⚡ How It Works",
             card1Title: "Auto-Backing",
             card1Desc: "Every time you buy ZBANK, the protocol automatically backs your holding with illiquid assets at a 9x multiplier.",
@@ -252,7 +314,33 @@
             title4: "💰 ZBANK Tokenomics",
             title5: "🔗 How to Buy ZBANK",
             title6: "🤝 Partners & Integrations",
-            title7: "🔒 KYC Verification"
+            title7: "🔒 KYC Verification",
+            title8: "⚠️ Risks & Disclaimers"
+        },
+        zh: {
+            tagline: "将非流动性传统资产引入 DeFi",
+            btnBot: "🤖 电报机器人",
+            btnBuy: "💰 购买 ZBANK",
+            btnSupport: "💬 支持",
+            formula1: "📈 购买 ZBANK 供应量的 +1%",
+            formula2: "💎 您的流动性中获得 +9% 的非流动性资产",
+            formulaDesc: "(冻结资金、侧袋、NPL、黄金、钻石、加密票据)",
+            calcTitle: "📊 计算您的增长",
+            calcBtn: "计算",
+            title1: "⚡ 工作原理",
+            card1Title: "自动背书",
+            card1Desc: "每次您购买 ZBANK，协议会自动以 9 倍乘数为您的持仓背书非流动性资产。",
+            card2Title: "您共同拥有的资产",
+            card2Desc: "冻结资金、侧袋、NPL、不良债务、黄金 (SKR)、实验室培育钻石、加密票据。",
+            card3Title: "9 倍乘数",
+            card3Desc: "购买 ZBANK 供应量的 1% = 您的持仓中获得 +9% 的非流动性资产。",
+            title2: "🔒 支持 ZBANK 的资产",
+            title3: "📊 示例",
+            title4: "💰 ZBANK 代币经济学",
+            title5: "🔗 如何购买 ZBANK",
+            title6: "🤝 合作伙伴与集成",
+            title7: "🔒 KYC 验证",
+            title8: "⚠️ 风险与免责声明"
         },
         ru: {
             tagline: "Мост для неликвидных активов в DeFi",
@@ -262,6 +350,8 @@
             formula1: "📈 Вы покупаете +1% от эмиссии ZBANK",
             formula2: "💎 К вашей ликвидности добавляется +9% в неликвидных активах",
             formulaDesc: "(замороженные фонды, side pockets, NPL, золото, бриллианты, криптовекселя)",
+            calcTitle: "📊 Рассчитайте свой рост",
+            calcBtn: "Рассчитать",
             title1: "⚡ Как это работает",
             card1Title: "Автоматическое обеспечение",
             card1Desc: "Каждый раз, когда вы покупаете ZBANK, протокол автоматически добавляет неликвидные активы к вашей позиции с множителем 9x.",
@@ -274,7 +364,8 @@
             title4: "💰 Токеномика ZBANK",
             title5: "🔗 Как купить ZBANK",
             title6: "🤝 Партнёры",
-            title7: "🔒 KYC Верификация"
+            title7: "🔒 KYC Верификация",
+            title8: "⚠️ Риски и отказ от ответственности"
         }
     };
     const defaultLang = "en";
@@ -287,6 +378,8 @@
         document.getElementById('formula1').innerHTML = t.formula1;
         document.getElementById('formula2').innerHTML = t.formula2;
         document.getElementById('formulaDesc').innerText = t.formulaDesc;
+        document.getElementById('calcTitle').innerText = t.calcTitle;
+        document.getElementById('calcBtn').innerText = t.calcBtn;
         document.getElementById('title1').innerText = t.title1;
         document.getElementById('card1Title').innerText = t.card1Title;
         document.getElementById('card1Desc').innerText = t.card1Desc;
@@ -300,6 +393,7 @@
         document.getElementById('title5').innerText = t.title5;
         document.getElementById('title6').innerText = t.title6;
         document.getElementById('title7').innerText = t.title7;
+        document.getElementById('title8').innerText = t.title8;
         localStorage.setItem('zbank_lang', lang);
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         if(document.querySelector(`.lang-btn[data-lang="${lang}"]`)) document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
