@@ -1,1 +1,132 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBANK — Whitepaper & Liquidity Mechanics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #000000 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(0,243,255,0.3);
+        }
+        h1 { color: #00f3ff; text-align: center; margin-bottom: 30px; }
+        h2 { color: #00f3ff; margin: 30px 0 15px; }
+        h3 { color: #00f3ff; margin: 20px 0 10px; }
+        .highlight { color: #00f3ff; font-weight: bold; }
+        .formula {
+            background: rgba(0,243,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th { color: #00f3ff; }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: #888;
+        }
+        .footer a { color: #00f3ff; }
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 ZBANK — Whitepaper & Liquidity Mechanics</h1>
+
+        <h2>📌 What is ZBANK?</h2>
+        <p>ZBANK is a community-driven token on TON that <span class="highlight">bridges illiquid and frozen assets</span> into DeFi. We acquire distressed assets — frozen funds, side pockets, NPLs, distressed debt — and convert them into operational liquidity.</p>
+
+        <h2>🔒 What Assets Do We Put In?</h2>
+        <ul>
+            <li>🏦 <strong>Frozen funds & side pockets</strong> — locked capital from hedge funds, PE, VC</li>
+            <li>📜 <strong>Distressed debt & NPLs</strong> — non-performing loans and bankruptcy claims</li>
+            <li>🥇 <strong>Gold (SKR)</strong> — warehouse receipts from Global Trust Depository and HSBC</li>
+            <li>💎 <strong>Lab-grown diamonds</strong> — IGI/GIA certified, stored in insured vaults</li>
+            <li>📄 <strong>Crypto Bills</strong> — promissory notes used as collateral or leased for yield</li>
+        </ul>
+
+        <h2>📈 How Liquidity Grows</h2>
+        <p>We do not simply add liquidity to DEX. We <span class="highlight">unlock value from illiquid assets</span>. As these assets are monetized, they generate operational liquidity.</p>
+
+        <div class="formula">
+            📊 <strong>Liquidity Growth Formula</strong><br>
+            If operational liquidity grows by <span class="highlight">+1%</span>, total ecosystem liquidity grows by <span class="highlight">+9%</span>
+        </div>
+
+        <h3>Why +9%?</h3>
+        <p>Because each illiquid asset, when unlocked, creates a multiplier effect through:</p>
+        <ul>
+            <li><strong>Rehypothecation</strong> — same asset used as collateral multiple times</li>
+            <li><strong>Lending & borrowing</strong> — liquidity re-lent to new borrowers</li>
+            <li><strong>Yield generation</strong> — fees from escrow, swaps, and leasing</li>
+            <li><strong>Arbitrage</strong> — price differences between secondary markets</li>
+        </ul>
+
+        <h2>📊 Example</h2>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            <tr><td>Initial illiquid asset value</td><td>$100,000,000</td></tr>
+            <tr><td>Operational liquidity unlocked (1%)</td><td>$1,000,000</td></tr>
+            <tr><td>Total ecosystem liquidity (×9)</td><td>$9,000,000</td></tr>
+        </table>
+
+        <h2>🔄 How It Works in Practice</h2>
+        <ol>
+            <li><strong>Acquire</strong> — We buy frozen funds, side pockets, NPLs at 0.5–0.8% of face value</li>
+            <li><strong>Monetize</strong> — Through legal structuring, secondary markets, or restructuring</li>
+            <li><strong>Generate</strong> — Operational liquidity flows into the ZBANK treasury</li>
+            <li><strong>Amplify</strong> — Liquidity is reused, lent, staked, or used for buybacks</li>
+        </ol>
+
+        <h2>💰 ZBANK Tokenomics</h2>
+        <ul>
+            <li><strong>Total Supply:</strong> 1,000,000,000 ZBANK</li>
+            <li><strong>Network:</strong> TON</li>
+            <li><strong>Ownership:</strong> Revoked (no mint, no freeze)</li>
+            <li><strong>Backing:</strong> Gold, diamonds, crypto bills, illiquid funds</li>
+        </ul>
+
+        <h2>🔗 Links</h2>
+        <p>📄 Contract: <code>EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</code></p>
+        <p>🔗 <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">View on Tonviewer</a></p>
+        <p>🔄 <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">Buy ZBANK on STON.fi</a></p>
+        <p>📞 <a href="https://t.me/BOYMAT_token_BYT" target="_blank">Support</a></p>
+
+        <div class="footer">
+            <p>© 2026 ZBANK — Bridging illiquid assets into DeFi</p>
+            <p><a href="https://byt-assist.github.io/zbank/">← Back to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
