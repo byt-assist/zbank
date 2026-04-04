@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBANK — Bridging Illiquid Assets into DeFi</title>
+    <meta name="description" content="ZBANK is a community-driven token on TON. Bridging illiquid legacy assets — frozen funds, side pockets, NPLs, distressed debt — into DeFi. Backed by gold, lab-grown diamonds, and crypto bills.">
+    <meta name="keywords" content="ZBANK, TON, DeFi, illiquid assets, gold, diamonds, crypto bills, frozen funds, side pockets">
+    <link rel="canonical" href="https://byt-assist.github.io/zbank/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #000000 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00f3ff, #0066cc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        .contract {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            font-family: monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #00f3ff;
+            color: #000;
+        }
+        .btn-primary:hover {
+            background: #0066cc;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid #00f3ff;
+        }
+        .btn-secondary:hover {
+            background: rgba(0,243,255,0.2);
+            transform: translateY(-2px);
+        }
+        .section {
+            margin: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #00f3ff;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,243,255,0.3);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00f3ff;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #00f3ff;
+        }
+        .card p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .card-link {
+            color: #00f3ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .partner {
+            background: rgba(255,255,255,0.05);
+            padding: 15px 25px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+        }
+        .footer a {
+            color: #00f3ff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 2.5rem; }
+            .btn-group { flex-direction: column; align-items: center; }
+            .btn { width: 80%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">ZBANK</div>
+            <div class="tagline">Bridging Illiquid Legacy Assets into DeFi</div>
+            <div class="contract">📄 Contract: EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</div>
+            <div class="btn-group">
+                <a href="https://t.me/BOYMAT_token_BYT" class="btn btn-primary" target="_blank">🤖 Telegram Bot</a>
+                <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" class="btn btn-secondary" target="_blank">💰 Buy ZBANK</a>
+                <a href="https://t.me/BOYMAT_token_BYT" class="btn btn-secondary" target="_blank">💬 Support</a>
+            </div>
+        </div>
 
+        <div class="section">
+            <div class="section-title">⚡ What ZBANK Does</div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🏦</div>
+                    <h3>Illiquid Funds</h3>
+                    <p>We buy frozen funds, side pockets, NPLs, distressed debt — turning dead capital into liquidity.</p>
+                    <a href="https://t.me/BOYMAT_token_BYT" class="card-link">Learn more →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🥇</div>
+                    <h3>Gold & Diamonds</h3>
+                    <p>Tokenized gold (SKR) and IGI/GIA certified lab-grown diamonds as collateral. Physical assets, on-chain liquidity.</p>
+                    <a href="https://t.me/BOYMAT_token_BYT" class="card-link">Learn more →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📜</div>
+                    <h3>Crypto Bills</h3>
+                    <p>Promissory notes (CryptoBills) used as collateral or leased for yield. Fixed supply, no mint, no freeze.</p>
+                    <a href="https://t.me/BOYMAT_token_BYT" class="card-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🔗 How to Buy ZBANK</div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Swap on STON.fi</h3>
+                    <p>Pair: ZBANK / TON</p>
+                    <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" class="card-link" target="_blank">Swap now →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💳</div>
+                    <h3>Buy TON with Card</h3>
+                    <p>Visa / Mastercard / Apple Pay</p>
+                    <a href="https://mercuryo.io/buy?coin=TON" class="card-link" target="_blank">Buy TON →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Binance Web3 Wallet</h3>
+                    <p>Buy BYT → swap to ZBANK (coming soon)</p>
+                    <a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x7352cdbca63f62358f08f6514d3b7ff2a2872aad&binanceChainId=56&chain=bsc" class="card-link" target="_blank">Buy BYT →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🤝 Partners & Integrations</div>
+            <div class="partners">
+                <div class="partner">Global Trust Depository</div>
+                <div class="partner">IGI/GIA Certified</div>
+                <div class="partner">STON.fi</div>
+                <div class="partner">DeDust</div>
+                <div class="partner">Tonkeeper</div>
+                <div class="partner">MyTonWallet</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📊 ZBANK Tokenomics</div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Total Supply</h3>
+                    <p>1,000,000,000 ZBANK</p>
+                    <p style="font-size:0.9rem">Fixed. No mint. No freeze.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Ownership Revoked</h3>
+                    <p>Admin rights are revoked. No one can mint new tokens or change metadata.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏦</div>
+                    <h3>Asset Backed</h3>
+                    <p>Gold (SKR) • Lab-grown diamonds • Crypto Bills • Illiquid funds</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 ZBANK — Bridging illiquid assets into DeFi</p>
+            <p>
+                <a href="https://t.me/BOYMAT_token_BYT" target="_blank">Telegram</a> |
+                <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">Tonviewer</a> |
+                <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank">STON.fi</a>
+            </p>
+            <p style="font-size:0.8rem; margin-top:20px">Network: TON | Contract: EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</p>
+        </div>
+    </div>
+</body>
+</html>
