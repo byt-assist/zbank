@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZBANK — Whitepaper & Liquidity Mechanics</title>
+    <title>ZBANK — Buy 1%, Get +9% Illiquid Assets</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -22,19 +21,18 @@
             padding: 40px;
             border: 1px solid rgba(0,243,255,0.3);
         }
-        h1 { color: #00f3ff; text-align: center; margin-bottom: 30px; }
-        h2 { color: #00f3ff; margin: 30px 0 15px; }
-        h3 { color: #00f3ff; margin: 20px 0 10px; }
+        h1 { color: #00f3ff; text-align: center; margin-bottom: 20px; }
+        .tagline { text-align: center; font-size: 1.3rem; margin-bottom: 30px; }
         .highlight { color: #00f3ff; font-weight: bold; }
         .formula {
             background: rgba(0,243,255,0.1);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 15px;
             text-align: center;
-            font-family: monospace;
-            font-size: 1.2rem;
-            margin: 20px 0;
+            margin: 30px 0;
         }
+        .formula p { font-size: 1.5rem; font-weight: bold; }
+        .formula .small { font-size: 1rem; font-weight: normal; margin-top: 10px; }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -57,17 +55,27 @@
         .footer a { color: #00f3ff; }
         @media (max-width: 768px) {
             .container { padding: 20px; }
+            .formula p { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏦 ZBANK — Whitepaper & Liquidity Mechanics</h1>
+        <h1>🏦 ZBANK</h1>
+        <div class="tagline">Buy 1% of the token supply.<br>Get <span class="highlight">+9% in illiquid assets</span> added to your liquidity.</div>
 
-        <h2>📌 What is ZBANK?</h2>
-        <p>ZBANK is a community-driven token on TON that <span class="highlight">bridges illiquid and frozen assets</span> into DeFi. We acquire distressed assets — frozen funds, side pockets, NPLs, distressed debt — and convert them into operational liquidity.</p>
+        <div class="formula">
+            <p>📈 <span class="highlight">+1%</span> of ZBANK purchased</p>
+            <p>→ → →</p>
+            <p>💎 <span class="highlight">+9%</span> in illiquid assets added</p>
+            <div class="small">(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)</div>
+        </div>
 
-        <h2>🔒 What Assets Do We Put In?</h2>
+        <h2>📌 How It Works</h2>
+        <p>Every time someone buys ZBANK, the protocol automatically backs their holding with <span class="highlight">illiquid and frozen assets</span> — at a <strong>9x multiplier</strong>.</p>
+        <p>You don't need to do anything. The assets are already there, backing your token.</p>
+
+        <h2>🔒 What Backs Your ZBANK</h2>
         <ul>
             <li>🏦 <strong>Frozen funds & side pockets</strong> — locked capital from hedge funds, PE, VC</li>
             <li>📜 <strong>Distressed debt & NPLs</strong> — non-performing loans and bankruptcy claims</li>
@@ -76,38 +84,24 @@
             <li>📄 <strong>Crypto Bills</strong> — promissory notes used as collateral or leased for yield</li>
         </ul>
 
-        <h2>📈 How Liquidity Grows</h2>
-        <p>We do not simply add liquidity to DEX. We <span class="highlight">unlock value from illiquid assets</span>. As these assets are monetized, they generate operational liquidity.</p>
+        <h2>📊 Example</h2>
+        <p>Imagine you buy ZBANK representing <strong>1% of the total supply</strong>.</p>
+        <p>The protocol automatically adds <strong>9% in illiquid assets</strong> to back your position.</p>
 
-        <div class="formula">
-            📊 <strong>Liquidity Growth Formula</strong><br>
-            If operational liquidity grows by <span class="highlight">+1%</span>, total ecosystem liquidity grows by <span class="highlight">+9%</span>
-        </div>
+        <table>
+            <tr><th>Your Purchase</th><td>1% of ZBANK supply</td></tr>
+            <tr><th>Added to Your Liquidity</th><td><span class="highlight">+9% in illiquid assets</span></td></tr>
+            <tr><th>Total Backing</th><td>10% (1% token + 9% assets)</td></tr>
+        </table>
 
-        <h3>Why +9%?</h3>
-        <p>Because each illiquid asset, when unlocked, creates a multiplier effect through:</p>
+        <h2>🔄 Why +9%?</h2>
+        <p>Because illiquid assets, when unlocked, create a multiplier effect:</p>
         <ul>
             <li><strong>Rehypothecation</strong> — same asset used as collateral multiple times</li>
             <li><strong>Lending & borrowing</strong> — liquidity re-lent to new borrowers</li>
             <li><strong>Yield generation</strong> — fees from escrow, swaps, and leasing</li>
             <li><strong>Arbitrage</strong> — price differences between secondary markets</li>
         </ul>
-
-        <h2>📊 Example</h2>
-        <table>
-            <tr><th>Parameter</th><th>Value</th></tr>
-            <tr><td>Initial illiquid asset value</td><td>$100,000,000</td></tr>
-            <tr><td>Operational liquidity unlocked (1%)</td><td>$1,000,000</td></tr>
-            <tr><td>Total ecosystem liquidity (×9)</td><td>$9,000,000</td></tr>
-        </table>
-
-        <h2>🔄 How It Works in Practice</h2>
-        <ol>
-            <li><strong>Acquire</strong> — We buy frozen funds, side pockets, NPLs at 0.5–0.8% of face value</li>
-            <li><strong>Monetize</strong> — Through legal structuring, secondary markets, or restructuring</li>
-            <li><strong>Generate</strong> — Operational liquidity flows into the ZBANK treasury</li>
-            <li><strong>Amplify</strong> — Liquidity is reused, lent, staked, or used for buybacks</li>
-        </ol>
 
         <h2>💰 ZBANK Tokenomics</h2>
         <ul>
@@ -124,7 +118,7 @@
         <p>📞 <a href="https://t.me/BOYMAT_token_BYT" target="_blank">Support</a></p>
 
         <div class="footer">
-            <p>© 2026 ZBANK — Bridging illiquid assets into DeFi</p>
+            <p>© 2026 ZBANK — Buy 1%, get +9% illiquid assets.</p>
             <p><a href="https://byt-assist.github.io/zbank/">← Back to Home</a></p>
         </div>
     </div>
