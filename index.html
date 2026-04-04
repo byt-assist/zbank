@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZBANK — Bridging Illiquid Assets into DeFi</title>
-    <meta name="description" content="ZBANK is a community-driven token on TON. Bridging illiquid legacy assets — frozen funds, side pockets, NPLs, distressed debt — into DeFi. Backed by gold, lab-grown diamonds, and crypto bills.">
-    <meta name="keywords" content="ZBANK, TON, DeFi, illiquid assets, gold, diamonds, crypto bills, frozen funds, side pockets">
+    <title>ZBANK — Buy 1%, Get +9% Illiquid Assets</title>
+    <meta name="description" content="ZBANK is a community-driven token on TON. Every time you buy 1% of the supply, you get +9% in illiquid assets — frozen funds, gold, diamonds, crypto bills.">
+    <meta name="keywords" content="ZBANK, TON, DeFi, illiquid assets, gold, diamonds, crypto bills">
     <link rel="canonical" href="https://byt-assist.github.io/zbank/">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0a0a2a 0%, #000000 100%);
@@ -20,10 +16,9 @@
             line-height: 1.6;
             padding: 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        /* Language Switcher */
         .lang-switch {
             position: absolute;
             top: 20px;
@@ -45,142 +40,67 @@
             font-size: 0.65rem;
             transition: all 0.3s;
         }
-        .lang-btn.active, .lang-btn:hover {
-            background: #00f3ff;
-            color: #000;
+        .lang-btn.active, .lang-btn:hover { background: #00f3ff; color: #000; }
+        
+        /* Header */
+        .header { text-align: center; padding: 100px 20px 40px; }
+        .logo a { display: inline-block; transition: all 0.3s ease; }
+        .logo a:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+            filter: drop-shadow(0 0 15px #00f3ff);
         }
-        .header {
+        .logo img { max-width: 280px; width: 100%; height: auto; margin-bottom: 20px; }
+        .tagline { font-size: 1.2rem; color: #ccc; margin-bottom: 20px; }
+        .contract { background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 40px; display: inline-block; font-family: monospace; font-size: 0.9rem; word-break: break-all; }
+        
+        /* Buttons */
+        .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 30px 0; }
+        .btn { padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        .btn-primary { background: #00f3ff; color: #000; }
+        .btn-primary:hover { background: #0066cc; color: #fff; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid #00f3ff; }
+        .btn-secondary:hover { background: rgba(0,243,255,0.2); transform: translateY(-2px); }
+        
+        /* Sections */
+        .section { margin: 60px 0; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #00f3ff; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 30px; backdrop-filter: blur(10px); border: 1px solid rgba(0,243,255,0.3); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #00f3ff; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .card h3 { margin-bottom: 15px; color: #00f3ff; }
+        .card p { color: #ccc; margin-bottom: 20px; }
+        .card-link { color: #00f3ff; text-decoration: none; font-weight: bold; }
+        
+        /* Formula Box */
+        .formula-box {
+            background: rgba(0,243,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
             text-align: center;
-            padding: 100px 20px 40px;
-        }
-        .logo {
-            font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #00f3ff, #0066cc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-        }
-        .tagline {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 30px;
-        }
-        .contract {
-            background: rgba(255,255,255,0.1);
-            padding: 8px 16px;
-            border-radius: 40px;
-            display: inline-block;
-            font-family: monospace;
-            font-size: 0.8rem;
-            word-break: break-all;
-        }
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .btn {
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .btn-primary {
-            background: #00f3ff;
-            color: #000;
-        }
-        .btn-primary:hover {
-            background: #0066cc;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
+            margin: 40px 0;
             border: 1px solid #00f3ff;
         }
-        .btn-secondary:hover {
-            background: rgba(0,243,255,0.2);
-            transform: translateY(-2px);
-        }
-        .section {
-            margin: 60px 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #00f3ff;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0,243,255,0.3);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #00f3ff;
-        }
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            margin-bottom: 15px;
-            color: #00f3ff;
-        }
-        .card p {
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-        .card-link {
-            color: #00f3ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .partners {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-        }
-        .partner {
-            background: rgba(255,255,255,0.05);
-            padding: 15px 25px;
-            border-radius: 40px;
-            font-weight: bold;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #888;
-        }
-        .footer a {
-            color: #00f3ff;
-            text-decoration: none;
-        }
+        .formula-box p { font-size: 1.8rem; font-weight: bold; }
+        .formula-box .small { font-size: 1rem; font-weight: normal; margin-top: 10px; }
+        .highlight { color: #00f3ff; }
+        
+        /* Partners */
+        .partners { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin: 40px 0; }
+        .partner { background: rgba(255,255,255,0.05); padding: 15px 25px; border-radius: 40px; font-weight: bold; }
+        
+        /* Footer */
+        .footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; }
+        .footer a { color: #00f3ff; text-decoration: none; }
+        
         @media (max-width: 768px) {
-            .logo { font-size: 2.5rem; }
             .lang-switch { position: static; justify-content: center; margin-bottom: 20px; }
             .header { padding-top: 20px; }
             .btn-group { flex-direction: column; align-items: center; }
             .btn { width: 80%; text-align: center; }
+            .formula-box p { font-size: 1.2rem; }
+            .logo img { max-width: 200px; }
         }
     </style>
 </head>
@@ -215,7 +135,11 @@
     </div>
 
     <div class="header">
-        <div class="logo">ZBANK</div>
+        <div class="logo">
+            <a href="https://byt-assist.github.io/zbank/">
+                <img src="zbank_logo.png" alt="ZBANK">
+            </a>
+        </div>
         <div class="tagline" id="tagline">Bridging Illiquid Legacy Assets into DeFi</div>
         <div class="contract" id="contract">📄 Contract: EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</div>
         <div class="btn-group">
@@ -225,35 +149,77 @@
         </div>
     </div>
 
+    <!-- Core Mechanism -->
+    <div class="formula-box">
+        <p id="formula1">📈 Buy <span class="highlight">+1%</span> of ZBANK supply</p>
+        <p id="formulaArrow">↓ ↓ ↓</p>
+        <p id="formula2">💎 Get <span class="highlight">+9%</span> in illiquid assets added to your liquidity</p>
+        <div class="small" id="formulaDesc">(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)</div>
+    </div>
+
     <div class="section">
-        <div class="section-title" id="title1">⚡ What ZBANK Does</div>
+        <div class="section-title" id="title1">⚡ How It Works</div>
         <div class="cards">
-            <div class="card"><div class="card-icon">🏦</div><h3 id="card1Title">Illiquid Funds</h3><p id="card1Desc">We buy frozen funds, side pockets, NPLs, distressed debt — turning dead capital into liquidity.</p><a href="https://t.me/BOYMAT_token_BYT" class="card-link" id="card1Link">Learn more →</a></div>
-            <div class="card"><div class="card-icon">🥇</div><h3 id="card2Title">Gold & Diamonds</h3><p id="card2Desc">Tokenized gold (SKR) and IGI/GIA certified lab-grown diamonds as collateral. Physical assets, on-chain liquidity.</p><a href="https://t.me/BOYMAT_token_BYT" class="card-link" id="card2Link">Learn more →</a></div>
-            <div class="card"><div class="card-icon">📜</div><h3 id="card3Title">Crypto Bills</h3><p id="card3Desc">Promissory notes (CryptoBills) used as collateral or leased for yield. Fixed supply, no mint, no freeze.</p><a href="https://t.me/BOYMAT_token_BYT" class="card-link" id="card3Link">Learn more →</a></div>
+            <div class="card"><div class="card-icon">🔄</div><h3 id="card1Title">Auto-Backing</h3><p id="card1Desc">Every time you buy ZBANK, the protocol automatically backs your holding with illiquid assets at a 9x multiplier.</p></div>
+            <div class="card"><div class="card-icon">🏦</div><h3 id="card2Title">What You Co-Own</h3><p id="card2Desc">Frozen funds, side pockets, NPLs, distressed debt, gold (SKR), lab-grown diamonds, crypto bills.</p></div>
+            <div class="card"><div class="card-icon">📈</div><h3 id="card3Title">9x Multiplier</h3><p id="card3Desc">1% of ZBANK purchased = +9% in illiquid assets backing your position.</p></div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title" id="title2">🔗 How to Buy ZBANK</div>
+        <div class="section-title" id="title2">🔒 Assets Backing ZBANK</div>
         <div class="cards">
-            <div class="card"><div class="card-icon">🔄</div><h3 id="card4Title">Swap on STON.fi</h3><p id="card4Desc">Pair: ZBANK / TON</p><a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" class="card-link" target="_blank" id="card4Link">Swap now →</a></div>
-            <div class="card"><div class="card-icon">💳</div><h3 id="card5Title">Buy TON with Card</h3><p id="card5Desc">Visa / Mastercard / Apple Pay</p><a href="https://mercuryo.io/buy?coin=TON" class="card-link" target="_blank" id="card5Link">Buy TON →</a></div>
-            <div class="card"><div class="card-icon">📱</div><h3 id="card6Title">Binance Web3 Wallet</h3><p id="card6Desc">Buy BYT → swap to ZBANK (coming soon)</p><a href="https://app.binance.com/uni-qr/web3-token-details?utm_medium=share&tokenCA=0x7352cdbca63f62358f08f6514d3b7ff2a2872aad&binanceChainId=56&chain=bsc" class="card-link" target="_blank" id="card6Link">Buy BYT →</a></div>
+            <div class="card"><div class="card-icon">🏦</div><h3>Frozen Funds & Side Pockets</h3><p>Locked capital from hedge funds, PE, VC — turned into liquidity.</p></div>
+            <div class="card"><div class="card-icon">🥇</div><h3>Gold (SKR)</h3><p>Warehouse receipts from Global Trust Depository and HSBC.</p></div>
+            <div class="card"><div class="card-icon">💎</div><h3>Lab-Grown Diamonds</h3><p>IGI/GIA certified, stored in insured vaults.</p></div>
+            <div class="card"><div class="card-icon">📜</div><h3>Crypto Bills</h3><p>Promissory notes used as collateral or leased for yield.</p></div>
+            <div class="card"><div class="card-icon">📉</div><h3>Distressed Debt & NPLs</h3><p>Non-performing loans and bankruptcy claims acquired at deep discount.</p></div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title" id="title3">🤝 Partners & Integrations</div>
-        <div class="partners"><div class="partner">Global Trust Depository</div><div class="partner">IGI/GIA Certified</div><div class="partner">STON.fi</div><div class="partner">DeDust</div><div class="partner">Tonkeeper</div><div class="partner">MyTonWallet</div></div>
+        <div class="section-title" id="title3">📊 Example</div>
+        <div class="cards">
+            <div class="card"><div class="card-icon">1️⃣</div><h3>You Buy</h3><p>1% of ZBANK total supply</p></div>
+            <div class="card"><div class="card-icon">➕</div><h3>You Get</h3><p><span class="highlight">+9% in illiquid assets</span> added to your liquidity</p></div>
+            <div class="card"><div class="card-icon">💰</div><h3>Total Backing</h3><p>10% (1% token + 9% assets)</p></div>
+        </div>
     </div>
 
     <div class="section">
-        <div class="section-title" id="title4">📊 ZBANK Tokenomics</div>
+        <div class="section-title" id="title4">💰 ZBANK Tokenomics</div>
         <div class="cards">
-            <div class="card"><div class="card-icon">🔄</div><h3>Total Supply</h3><p>1,000,000,000 ZBANK<br>Fixed. No mint. No freeze.</p></div>
+            <div class="card"><div class="card-icon">🔄</div><h3>Total Supply</h3><p>1,000,000,000 ZBANK</p><p>Fixed. No mint. No freeze.</p></div>
             <div class="card"><div class="card-icon">🔒</div><h3>Ownership Revoked</h3><p>Admin rights are revoked. No one can mint new tokens or change metadata.</p></div>
             <div class="card"><div class="card-icon">🏦</div><h3>Asset Backed</h3><p>Gold (SKR) • Lab-grown diamonds • Crypto Bills • Illiquid funds</p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" id="title5">🔗 How to Buy ZBANK</div>
+        <div class="cards">
+            <div class="card"><div class="card-icon">🔄</div><h3>Swap on STON.fi</h3><p>Pair: ZBANK / TON</p><a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" class="card-link" target="_blank">Swap now →</a></div>
+            <div class="card"><div class="card-icon">💳</div><h3>Buy TON with Card</h3><p>Visa / Mastercard / Apple Pay</p><a href="https://mercuryo.io/buy?coin=TON" class="card-link" target="_blank">Buy TON →</a></div>
+            <div class="card"><div class="card-icon">📱</div><h3>Binance Web3 Wallet</h3><p>Buy BYT → swap to ZBANK (coming soon)</p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" id="title6">🤝 Partners & Integrations</div>
+        <div class="partners">
+            <div class="partner">Global Trust Depository</div>
+            <div class="partner">IGI/GIA Certified</div>
+            <div class="partner">STON.fi</div>
+            <div class="partner">DeDust</div>
+            <div class="partner">Tonkeeper</div>
+            <div class="partner">MyTonWallet</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" id="title7">🔒 KYC Verification</div>
+        <div class="cards">
+            <div class="card"><div class="card-icon">📋</div><h3>Complete KYC</h3><p>Required for large purchases and institutional investors.</p><a href="https://byt-assist.github.io/zbank/kyc.html" class="card-link" target="_blank">Go to KYC →</a></div>
         </div>
     </div>
 
@@ -266,9 +232,50 @@
 
 <script>
     const translations = {
-        en: { tagline: "Bridging Illiquid Legacy Assets into DeFi", btnBot: "🤖 Telegram Bot", btnBuy: "💰 Buy ZBANK", btnSupport: "💬 Support", title1: "⚡ What ZBANK Does", card1Title: "Illiquid Funds", card1Desc: "We buy frozen funds, side pockets, NPLs, distressed debt — turning dead capital into liquidity.", card2Title: "Gold & Diamonds", card2Desc: "Tokenized gold (SKR) and IGI/GIA certified lab-grown diamonds as collateral.", card3Title: "Crypto Bills", card3Desc: "Promissory notes (CryptoBills) used as collateral or leased for yield.", title2: "🔗 How to Buy ZBANK", card4Title: "Swap on STON.fi", card4Desc: "Pair: ZBANK / TON", card5Title: "Buy TON with Card", card5Desc: "Visa / Mastercard / Apple Pay", card6Title: "Binance Web3 Wallet", card6Desc: "Buy BYT → swap to ZBANK (coming soon)", title3: "🤝 Partners & Integrations", title4: "📊 ZBANK Tokenomics" },
-        ru: { tagline: "Мост для неликвидных активов в DeFi", btnBot: "🤖 Telegram Бот", btnBuy: "💰 Купить ZBANK", btnSupport: "💬 Поддержка", title1: "⚡ Что делает ZBANK", card1Title: "Неликвидные фонды", card1Desc: "Покупаем замороженные фонды, side pockets, NPL, distressed debt — превращаем мёртвый капитал в ликвидность.", card2Title: "Золото и бриллианты", card2Desc: "Токенизированное золото (SKR) и IGI/GIA сертифицированные бриллианты как залог.", card3Title: "Криптовекселя", card3Desc: "Долговые расписки (CryptoBills) как залог или аренда для дохода.", title2: "🔗 Как купить ZBANK", card4Title: "Обмен на STON.fi", card4Desc: "Пара: ZBANK / TON", card5Title: "Купить TON за карту", card5Desc: "Visa / Mastercard / Apple Pay", card6Title: "Binance Web3 Кошелёк", card6Desc: "Купить BYT → обменять на ZBANK (скоро)", title3: "🤝 Партнёры", title4: "📊 Токеномика ZBANK" },
-        ar: { tagline: "جسر الأصول غير السائلة إلى DeFi", btnBot: "🤖 بوت تيليجرام", btnBuy: "💰 شراء ZBANK", btnSupport: "💬 دعم", title1: "⚡ ماذا يفعل ZBANK", card1Title: "الأموال غير السائلة", card1Desc: "نشتري الأموال المجمدة والجوانب الجانبية والقروض غير العاملة والديون المتعثرة — نحول رأس المال الميت إلى سيولة.", card2Title: "الذهب والماس", card2Desc: "الذهب المرمز (SKR) والماس المزروع في المختبر كضمان.", card3Title: "الفواتير المشفرة", card3Desc: "سندات إذنية (CryptoBills) كضمان أو تأجير للعائد.", title2: "🔗 كيفية شراء ZBANK", card4Title: "مبادلة على STON.fi", card4Desc: "الزوج: ZBANK / TON", card5Title: "شراء TON بالبطاقة", card5Desc: "Visa / Mastercard / Apple Pay", card6Title: "محفظة Binance Web3", card6Desc: "شراء BYT → مبادلة إلى ZBANK (قريباً)", title3: "🤝 الشركاء", title4: "📊 اقتصاديات ZBANK" }
+        en: {
+            tagline: "Bridging Illiquid Legacy Assets into DeFi",
+            btnBot: "🤖 Telegram Bot",
+            btnBuy: "💰 Buy ZBANK",
+            btnSupport: "💬 Support",
+            formula1: "📈 Buy +1% of ZBANK supply",
+            formula2: "💎 Get +9% in illiquid assets added to your liquidity",
+            formulaDesc: "(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)",
+            title1: "⚡ How It Works",
+            card1Title: "Auto-Backing",
+            card1Desc: "Every time you buy ZBANK, the protocol automatically backs your holding with illiquid assets at a 9x multiplier.",
+            card2Title: "What You Co-Own",
+            card2Desc: "Frozen funds, side pockets, NPLs, distressed debt, gold (SKR), lab-grown diamonds, crypto bills.",
+            card3Title: "9x Multiplier",
+            card3Desc: "1% of ZBANK purchased = +9% in illiquid assets backing your position.",
+            title2: "🔒 Assets Backing ZBANK",
+            title3: "📊 Example",
+            title4: "💰 ZBANK Tokenomics",
+            title5: "🔗 How to Buy ZBANK",
+            title6: "🤝 Partners & Integrations",
+            title7: "🔒 KYC Verification"
+        },
+        ru: {
+            tagline: "Мост для неликвидных активов в DeFi",
+            btnBot: "🤖 Telegram Бот",
+            btnBuy: "💰 Купить ZBANK",
+            btnSupport: "💬 Поддержка",
+            formula1: "📈 Вы покупаете +1% от эмиссии ZBANK",
+            formula2: "💎 К вашей ликвидности добавляется +9% в неликвидных активах",
+            formulaDesc: "(замороженные фонды, side pockets, NPL, золото, бриллианты, криптовекселя)",
+            title1: "⚡ Как это работает",
+            card1Title: "Автоматическое обеспечение",
+            card1Desc: "Каждый раз, когда вы покупаете ZBANK, протокол автоматически добавляет неликвидные активы к вашей позиции с множителем 9x.",
+            card2Title: "Что вы получаете",
+            card2Desc: "Замороженные фонды, side pockets, NPL, золото (SKR), бриллианты, криптовекселя.",
+            card3Title: "Множитель 9x",
+            card3Desc: "1% купленного ZBANK = +9% неликвидных активов в обеспечение.",
+            title2: "🔒 Активы в обеспечении ZBANK",
+            title3: "📊 Пример",
+            title4: "💰 Токеномика ZBANK",
+            title5: "🔗 Как купить ZBANK",
+            title6: "🤝 Партнёры",
+            title7: "🔒 KYC Верификация"
+        }
     };
     const defaultLang = "en";
     function setLanguage(lang) {
@@ -277,6 +284,9 @@
         document.getElementById('btnBot').innerText = t.btnBot;
         document.getElementById('btnBuy').innerText = t.btnBuy;
         document.getElementById('btnSupport').innerText = t.btnSupport;
+        document.getElementById('formula1').innerHTML = t.formula1;
+        document.getElementById('formula2').innerHTML = t.formula2;
+        document.getElementById('formulaDesc').innerText = t.formulaDesc;
         document.getElementById('title1').innerText = t.title1;
         document.getElementById('card1Title').innerText = t.card1Title;
         document.getElementById('card1Desc').innerText = t.card1Desc;
@@ -285,14 +295,11 @@
         document.getElementById('card3Title').innerText = t.card3Title;
         document.getElementById('card3Desc').innerText = t.card3Desc;
         document.getElementById('title2').innerText = t.title2;
-        document.getElementById('card4Title').innerText = t.card4Title;
-        document.getElementById('card4Desc').innerText = t.card4Desc;
-        document.getElementById('card5Title').innerText = t.card5Title;
-        document.getElementById('card5Desc').innerText = t.card5Desc;
-        document.getElementById('card6Title').innerText = t.card6Title;
-        document.getElementById('card6Desc').innerText = t.card6Desc;
         document.getElementById('title3').innerText = t.title3;
         document.getElementById('title4').innerText = t.title4;
+        document.getElementById('title5').innerText = t.title5;
+        document.getElementById('title6').innerText = t.title6;
+        document.getElementById('title7').innerText = t.title7;
         localStorage.setItem('zbank_lang', lang);
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         if(document.querySelector(`.lang-btn[data-lang="${lang}"]`)) document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
