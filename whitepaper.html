@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZBANK — Whitepaper | Illiquid Assets to DeFi</title>
-    <meta name="description" content="ZBANK Whitepaper — Bridging illiquid assets into DeFi. Fixed supply, ownership revoked, 9x liquidity multiplier.">
-    <link rel="canonical" href="https://byt-assist.github.io/zbank/whitepaper.html">
+    <title>ZBANK — Whitepaper</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRXP2EW5J6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QRXP2EW5J6');
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* стили из предыдущей версии whitepaper.html (с анимациями) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0a0a2a 0%, #000000 100%);
@@ -19,131 +22,31 @@
             line-height: 1.6;
             padding: 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-bottom: 1px solid rgba(0,243,255,0.3);
-            margin-bottom: 40px;
-        }
-        .logo {
-            font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #00f3ff, #0066cc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #ccc;
-            animation: fadeInUp 1s ease;
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.02); }
-        }
-        .section {
-            margin: 60px 0;
-            animation: fadeInUp 0.8s ease;
-        }
-        .section-title {
-            font-size: 2rem;
-            color: #00f3ff;
-            margin-bottom: 30px;
-            border-left: 4px solid #00f3ff;
-            padding-left: 20px;
-        }
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(0,243,255,0.3);
-            transition: all 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #00f3ff;
-            box-shadow: 0 0 20px rgba(0,243,255,0.2);
-        }
-        .card h3 {
-            color: #00f3ff;
-            margin-bottom: 15px;
-        }
-        .card p, .card ul {
-            color: #ccc;
-            margin-bottom: 15px;
-        }
-        .card ul {
-            margin-left: 20px;
-        }
-        .card li {
-            margin-bottom: 8px;
-        }
-        .highlight {
-            color: #00f3ff;
-            font-weight: bold;
-        }
-        .formula {
-            background: linear-gradient(135deg, rgba(0,243,255,0.1), rgba(0,102,204,0.1));
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin: 30px 0;
-            border: 1px solid #00f3ff;
-            animation: pulse 3s infinite;
-        }
-        .formula p {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        .formula .small {
-            font-size: 1rem;
-            font-weight: normal;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        th {
-            color: #00f3ff;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #888;
-        }
-        .footer a {
-            color: #00f3ff;
-            text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            .logo { font-size: 2.5rem; }
-            .formula p { font-size: 1.2rem; }
-            .section-title { font-size: 1.5rem; }
-        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid rgba(0,243,255,0.3); margin-bottom: 40px; }
+        .logo { font-size: 4rem; font-weight: bold; background: linear-gradient(135deg, #00f3ff, #0066cc); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 20px; animation: fadeInDown 1s ease; }
+        .tagline { font-size: 1.2rem; color: #ccc; animation: fadeInUp 1s ease; }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.02); } }
+        .section { margin: 60px 0; animation: fadeInUp 0.8s ease; }
+        .section-title { font-size: 2rem; color: #00f3ff; margin-bottom: 30px; border-left: 4px solid #00f3ff; padding-left: 20px; }
+        .card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 30px; margin-bottom: 30px; border: 1px solid rgba(0,243,255,0.3); transition: all 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #00f3ff; box-shadow: 0 0 20px rgba(0,243,255,0.2); }
+        .card h3 { color: #00f3ff; margin-bottom: 15px; }
+        .card p, .card ul { color: #ccc; margin-bottom: 15px; }
+        .card ul { margin-left: 20px; }
+        .card li { margin-bottom: 8px; }
+        .highlight { color: #00f3ff; font-weight: bold; }
+        .formula { background: linear-gradient(135deg, rgba(0,243,255,0.1), rgba(0,102,204,0.1)); border-radius: 20px; padding: 30px; text-align: center; margin: 30px 0; border: 1px solid #00f3ff; animation: pulse 3s infinite; }
+        .formula p { font-size: 1.8rem; font-weight: bold; }
+        .formula .small { font-size: 1rem; font-weight: normal; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { color: #00f3ff; }
+        .footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; }
+        .footer a { color: #00f3ff; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) { .logo { font-size: 2.5rem; } .formula p { font-size: 1.2rem; } .section-title { font-size: 1.5rem; } }
     </style>
 </head>
 <body>
@@ -155,48 +58,17 @@
 
     <div class="section">
         <div class="section-title">📌 1. Introduction</div>
-        <div class="card">
-            <p>ZBANK is a <span class="highlight">community-driven token on TON</span> designed to unlock value from illiquid and frozen assets. We acquire distressed assets — frozen funds, side pockets, NPLs, distressed debt — and convert them into operational liquidity.</p>
-            <p>Unlike traditional tokens, ZBANK is <span class="highlight">backed by real collateral</span>: gold (SKR), lab-grown diamonds, crypto bills, and institutional-grade loans.</p>
-        </div>
+        <div class="card"><p>ZBANK is a <span class="highlight">community-driven token on TON</span> designed to unlock value from illiquid and frozen assets...</p></div>
     </div>
-
     <div class="section">
         <div class="section-title">📈 2. Core Mechanism: +1% → +9%</div>
-        <div class="formula">
-            <p>📈 Buy <span class="highlight">+1%</span> of ZBANK supply</p>
-            <p>↓ ↓ ↓</p>
-            <p>💎 Get <span class="highlight">+9%</span> in illiquid assets added to your liquidity</p>
-            <div class="small">(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)</div>
-        </div>
-        <div class="card">
-            <h3>Why +9%?</h3>
-            <p>Because illiquid assets, when unlocked, create a multiplier effect through:</p>
-            <ul>
-                <li><strong>Rehypothecation</strong> — same asset used as collateral multiple times</li>
-                <li><strong>Lending & borrowing</strong> — liquidity re-lent to new borrowers</li>
-                <li><strong>Yield generation</strong> — fees from escrow, swaps, and leasing</li>
-                <li><strong>Arbitrage</strong> — price differences between secondary markets</li>
-            </ul>
-        </div>
+        <div class="formula"><p>📈 Buy <span class="highlight">+1%</span> of ZBANK supply</p><p>↓ ↓ ↓</p><p>💎 Get <span class="highlight">+9%</span> in illiquid assets added to your liquidity</p><div class="small">(frozen funds, side pockets, NPLs, gold, diamonds, crypto bills)</div></div>
+        <div class="card"><h3>Why +9%?</h3><p>Because illiquid assets, when unlocked, create a multiplier effect through rehypothecation, lending & borrowing, yield generation, and arbitrage.</p></div>
     </div>
-
     <div class="section">
         <div class="section-title">🔒 3. Assets Backing ZBANK</div>
-        <div class="card">
-            <h3>🔹 Frozen Funds & Side Pockets</h3>
-            <p>Locked capital from hedge funds, private equity, and venture capital funds — acquired at 0.5–0.8% of face value.</p>
-            <h3>🔹 Gold (SKR)</h3>
-            <p>Warehouse receipts from Global Trust Depository and HSBC. Fully insured, stored in LBMA-certified vaults.</p>
-            <h3>🔹 Lab-Grown Diamonds</h3>
-            <p>IGI/GIA certified, stored in insured vaults. High liquidity in secondary markets.</p>
-            <h3>🔹 Crypto Bills</h3>
-            <p>Promissory notes used as collateral or leased for yield. Fixed supply, no mint, no freeze.</p>
-            <h3>🔹 Distressed Debt & NPLs</h3>
-            <p>Non-performing loans and bankruptcy claims acquired at deep discount (5–20% of face value).</p>
-        </div>
+        <div class="card"><h3>🔹 Frozen Funds & Side Pockets</h3><p>Locked capital from hedge funds, private equity, and venture capital funds — acquired at 0.5–0.8% of face value.</p><h3>🔹 Gold (SKR)</h3><p>Warehouse receipts from Global Trust Depository and HSBC. Fully insured, stored in LBMA-certified vaults.</p><h3>🔹 Lab-Grown Diamonds</h3><p>IGI/GIA certified, stored in insured vaults. High liquidity in secondary markets.</p><h3>🔹 Crypto Bills</h3><p>Promissory notes used as collateral or leased for yield. Fixed supply, no mint, no freeze.</p><h3>🔹 Distressed Debt & NPLs</h3><p>Non-performing loans and bankruptcy claims acquired at deep discount (5–20% of face value).</p></div>
     </div>
-
     <div class="section">
         <div class="section-title">💰 4. Tokenomics</div>
         <div class="card">
@@ -208,11 +80,10 @@
                 <tr><td>Decimals</td><td>9</td></tr>
                 <tr><td>Network</td><td>TON</td></tr>
                 <tr><td>Ownership</td><td>Revoked (no mint, no freeze)</td></tr>
-                <tr><td>Logo</td><td>https://byt-assist.github.io/zbank/zbank_logo.png</td></tr>
+                <tr><td>Logo</td><td><a href="https://byt-assist.github.io/zbank/zbank_logo.png" style="color:#00f3ff;">Link</a></td></tr>
             </table>
         </div>
     </div>
-
     <div class="section">
         <div class="section-title">📊 5. Token Distribution</div>
         <div class="card">
@@ -227,7 +98,6 @@
             </table>
         </div>
     </div>
-
     <div class="section">
         <div class="section-title">📈 6. Example</div>
         <div class="card">
@@ -235,52 +105,21 @@
                 <tr><th>Your Purchase</th><th>You Get</th><th>Total Backing</th></tr>
                 <tr><td>1% of ZBANK supply</td><td>+9% in illiquid assets</td><td>10% (1% token + 9% assets)</td></tr>
             </table>
-            <p style="margin-top:15px">If you buy ZBANK representing <span class="highlight">1% of the total supply</span>, the protocol automatically adds <span class="highlight">9% in illiquid assets</span> to back your position.</p>
         </div>
     </div>
-
     <div class="section">
         <div class="section-title">🔄 7. Roadmap</div>
-        <div class="card">
-            <ul>
-                <li><strong>Q2 2026</strong> — Token launch on TON, liquidity pools on STON.fi and DeDust, ownership revoked.</li>
-                <li><strong>Q3 2026</strong> — First illiquid asset acquisition (frozen funds, side pockets).</li>
-                <li><strong>Q4 2026</strong> — Integration with gold (SKR) and lab-grown diamonds as collateral.</li>
-                <li><strong>Q1 2027</strong> — Launch of crypto bill leasing program (12–25% APR).</li>
-                <li><strong>Q2 2027</strong> — Cross-chain expansion to Solana and Arbitrum.</li>
-                <li><strong>Q4 2027</strong> — DAO governance launch for liquidity allocation.</li>
-            </ul>
-        </div>
+        <div class="card"><ul><li><strong>Q2 2026</strong> — Token launch on TON, liquidity pools on STON.fi and DeDust, ownership revoked.</li><li><strong>Q3 2026</strong> — First illiquid asset acquisition (frozen funds, side pockets).</li><li><strong>Q4 2026</strong> — Integration with gold (SKR) and lab-grown diamonds as collateral.</li><li><strong>Q1 2027</strong> — Launch of crypto bill leasing program (12–25% APR).</li><li><strong>Q2 2027</strong> — Cross-chain expansion to Solana and Arbitrum.</li><li><strong>Q4 2027</strong> — DAO governance launch for liquidity allocation.</li></ul></div>
     </div>
-
     <div class="section">
         <div class="section-title">⚠️ 8. Risks & Disclaimers</div>
-        <div class="card">
-            <ul>
-                <li><strong>Market volatility</strong> — Crypto markets are highly volatile.</li>
-                <li><strong>Regulatory risks</strong> — Changes in UAE/EU/USA regulations may affect operations.</li>
-                <li><strong>Liquidity risks</strong> — Illiquid assets may take time to monetize.</li>
-                <li><strong>Smart contract risks</strong> — Audited but no system is 100% secure.</li>
-                <li><strong>Not a security</strong> — ZBANK is a utility token, not an investment contract.</li>
-            </ul>
-        </div>
+        <div class="card"><ul><li><strong>Market volatility</strong> — Crypto markets are highly volatile.</li><li><strong>Regulatory risks</strong> — Changes in UAE/EU/USA regulations may affect operations.</li><li><strong>Liquidity risks</strong> — Illiquid assets may take time to monetize.</li><li><strong>Smart contract risks</strong> — Audited but no system is 100% secure.</li><li><strong>Investment & Utility</strong> — ZBANK is designed for long-term value appreciation through real-world asset backing. While it can be held as an investment, it also provides utility within the ecosystem — governance, staking, and access to illiquid asset pools. Not registered as a security.</li></ul></div>
     </div>
-
     <div class="section">
         <div class="section-title">🔗 9. Official Links</div>
-        <div class="card">
-            <p>📄 Contract: <code>EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</code></p>
-            <p>🔗 <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank" style="color:#00f3ff;">View on Tonviewer</a></p>
-            <p>🔄 <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank" style="color:#00f3ff;">Buy ZBANK on STON.fi</a></p>
-            <p>🌐 <a href="https://byt-assist.github.io/zbank/" target="_blank" style="color:#00f3ff;">Official Website</a></p>
-            <p>📞 <a href="https://t.me/BOYMAT_token_BYT" target="_blank" style="color:#00f3ff;">Telegram Support</a></p>
-        </div>
+        <div class="card"><p>📄 Contract: <code>EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX</code></p><p>🔗 <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank" style="color:#00f3ff;">View on Tonviewer</a></p><p>🔄 <a href="https://app.ston.fi/swap?jetton=EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX" target="_blank" style="color:#00f3ff;">Buy ZBANK on STON.fi</a></p><p>🌐 <a href="https://byt-assist.github.io/zbank/" target="_blank" style="color:#00f3ff;">Official Website</a></p><p>📞 <a href="https://t.me/BOYMAT_token_BYT" target="_blank" style="color:#00f3ff;">Telegram Support</a></p></div>
     </div>
-
-    <div class="footer">
-        <p>© 2026 ZBANK — Bridging illiquid assets into DeFi</p>
-        <p><a href="https://byt-assist.github.io/zbank/">Home</a> | <a href="https://t.me/BOYMAT_token_BYT">Telegram</a> | <a href="https://tonviewer.com/EQBdDRtzRh_plu9_jyN5rLRbqf_oQ8oxov--4UUdxmXizpHX">Tonviewer</a></p>
-    </div>
+    <div class="footer"><a href="https://byt-assist.github.io/zbank/">Home</a> | <a href="about.html">About</a> | <a href="faq.html">FAQ</a> | <a href="tokenomics.html">Tokenomics</a> | <a href="roadmap.html">Roadmap</a> | <a href="security.html">Security</a> | <a href="kyc.html">KYC</a></div>
 </div>
 </body>
 </html>
